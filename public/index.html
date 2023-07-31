@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <script src="https://kit.fontawesome.com/6be4547409.js" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
@@ -33,6 +33,16 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+
+      window.serverConfig = /*[[${frontConfig}]]*/ {};
+      window.serverConfig.oncokbEnabled = /*[[${oncokbEnabled}]]*/ '';
+
+
+      /*]]>*/
+
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
